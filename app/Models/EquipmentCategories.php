@@ -13,4 +13,9 @@ class EquipmentCategories extends Model
         'name',
         'description',
     ];
+
+    public function equipments()
+    {
+        return $this->hasMany(Equipments::class, 'category_id');
+    }
 }
